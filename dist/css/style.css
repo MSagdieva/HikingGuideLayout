@@ -131,11 +131,9 @@ h2.title {
 }
 
 .main-heading {
-  margin-top: -50px;
   width: 100%;
   top: 0;
-  background: url("../img/main-heading.jpg");
-  background-size: cover;
+  background: url("../img/VG.png"), url("../img/BG-Hero.png"), url("../img/HG.png"), linear-gradient(#0b1d26, #0b1d26);
 }
 
 .main-heading_btn {
@@ -147,7 +145,7 @@ h2.title {
 }
 
 .main-heading__container {
-  padding: 100px 20px;
+  height: 1200px;
 }
 
 .main-heading__content {
