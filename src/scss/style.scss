@@ -1,5 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Oswald:regular&display=swap&subset=cyrillic-ext");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,regular,600&display=swap&subset=cyrillic-ext");
+@font-face {
+    font-family: "Chronicle Display"; /* Имя шрифта */
+    src: url("/fonts/ChronicleDisplayRoman.otf"); /* Путь к файлу со шрифтом */
+   }
+   @font-face {
+    font-family: "Gilroy"; /* Имя шрифта */
+    src: url("/fonts/Gilroy-Regular.woff2"); /* Путь к файлу со шрифтом */
+   }
 @import url('/src/scss/normalize.css');
 
 @import 'mixins/adaptive-value';
@@ -9,6 +15,8 @@
 body{
 box-sizing: border-box;
 font-size: 20px;
+background-color: $secondary;
+color: $primary;
 a{
     text-decoration: none;
     color: #fff;
@@ -32,11 +40,13 @@ ul{
 margin: 150px 0 0 0;
 }
 .title {
+    color: $primary;
     font-family: $fontFamily;
     font-weight: normal;
     text-transform: uppercase;
 }
 h2.title{
+    color: $primary;
     @include adaptive-value('font-size', 26, 18, 0);
     display: block;
     line-height: 1.8;

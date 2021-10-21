@@ -1,12 +1,26 @@
-@import url("https://fonts.googleapis.com/css?family=Oswald:regular&display=swap&subset=cyrillic-ext");
-
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,regular,600&display=swap&subset=cyrillic-ext");
+@charset "UTF-8";
 
 @import url("/src/scss/normalize.css");
+
+@font-face {
+  font-family: "Chronicle Display";
+  /* Имя шрифта */
+  src: url("/fonts/ChronicleDisplayRoman.otf");
+  /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+  font-family: "Gilroy";
+  /* Имя шрифта */
+  src: url("/fonts/Gilroy-Regular.woff2");
+  /* Путь к файлу со шрифтом */
+}
 
 body {
   box-sizing: border-box;
   font-size: 20px;
+  background-color: #0B1D26;
+  color: #fff;
 }
 
 body a {
@@ -25,12 +39,14 @@ ul {
 }
 
 .title {
-  font-family: "Oswald";
+  color: #fff;
+  font-family: "Chronicle Display";
   font-weight: normal;
   text-transform: uppercase;
 }
 
 h2.title {
+  color: #fff;
   font-size: calc(18px + 8 * ((100vw - 320px) / 1600));
   display: block;
   line-height: 1.8;
@@ -38,13 +54,13 @@ h2.title {
 }
 
 .text {
-  font-family: "Open Sans";
+  font-family: "Gilroy";
   font-weight: 300;
   line-height: 1.4;
 }
 
 .btn {
-  font-family: "Open Sans";
+  font-family: "Gilroy";
   font-weight: 600;
   line-height: 137.5%;
   text-transform: uppercase;
@@ -62,21 +78,20 @@ h2.title {
 }
 
 .header {
-  position: relative;
+  position: absolute;
   z-index: 1000;
-  height: 50px;
+  height: 140px;
   width: 100%;
-  background-color: rgba(50, 154, 240, 0.288);
+  background-color: transparent;
 }
 
 .header__content {
-  top: 0;
-  left: 50%;
+  top: 50%;
+  transform: translate3d(0, -30%, 0);
   text-align: center;
   width: 100%;
   height: 100%;
   position: absolute;
-  transform: translateX(-50%);
 }
 
 .header__icon-container {
@@ -87,6 +102,22 @@ h2.title {
 
 .header__icon-image {
   width: calc(80px + 60 * ((100vw - 320px) / 1600));
+}
+
+.header__account {
+  position: absolute;
+  right: 40px;
+  top: 11px;
+}
+
+.header__account-text {
+  color: #fff;
+  font-size: 17px;
+  font-family: "Gilroy";
+}
+
+.header__account-image {
+  vertical-align: top;
 }
 
 .menu {
@@ -103,7 +134,7 @@ h2.title {
 
 .menu__link {
   font-size: 14px;
-  font-family: "Open Sans";
+  font-family: "Gilroy";
   font-weight: 600;
   margin: 0;
   padding: 20px;
@@ -131,9 +162,13 @@ h2.title {
 }
 
 .main-heading {
+  padding-top: 140px;
   width: 100%;
   top: 0;
-  background: url("../img/VG.png"), url("../img/BG-Hero.png"), url("../img/HG.png"), linear-gradient(#0b1d26, #0b1d26);
+  background: linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0B1D26 108.93%), url("../img/VG.png"), url("../img/MG.png"), url("../img/HG.png"), linear-gradient(#0b1d26, #0b1d26);
+  background-size: 100% 100%,100% 50%, 100% 70%, 100% 50%, 100% 100%;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: top, bottom, bottom, top, top;
 }
 
 .main-heading_btn {
@@ -162,10 +197,11 @@ h2.title {
 
 .main-heading__title {
   line-height: 1.5;
+  font-weight: 500;
+  text-transform: capitalize;
   color: #fff;
-  text-align: center;
+  text-align: left;
   font-size: calc(38px + 10 * ((100vw - 320px) / 1600));
-  text-transform: none;
   margin: 0;
 }
 
@@ -180,6 +216,7 @@ h2.title {
 .info-block__container {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .info-block__container .info-block {
@@ -188,26 +225,6 @@ h2.title {
 
 .info-block__container .info-block ~ .info-block {
   margin-left: 30px;
-}
-
-.img-container {
-  position: relative;
-  padding: 0 0 50% 0;
-  overflow: hidden;
-}
-
-.ill {
-  position: absolute;
-  top: 0;
-  left: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
-  width: 100%;
-  height: 100%;
-  min-width: 100px;
-  min-height: 100px;
 }
 
 .text-container .text {
@@ -233,9 +250,9 @@ h2.title {
 }
 
 .footer__content {
-  background-color: #329af0;
+  background-color: #0B1D26;
   color: #fff;
-  font-family: "Open Sans";
+  font-family: "Gilroy";
   font-weight: 300;
 }
 
