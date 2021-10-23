@@ -2,14 +2,14 @@
     max-width: $maxWidthContainer+px;
     margin: 0 auto;
     @media (max-width: $md1+px) {
-        max-width: 800px;
+        max-width: 1200px;
     }
-    @media (max-width: 978px){
-        max-width: 600px;
+    @media (max-width: $md2+px){
+        max-width: 800px;
         padding: 0 10px;
     }
     @media (max-width: $md3+px) {
-        max-width: none;
+        max-width: 600px;
     }
     @media (max-width: $md4+px) {
         max-width: none;

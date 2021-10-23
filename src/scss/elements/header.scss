@@ -16,7 +16,7 @@
     }
     &__icon-container{
         position: absolute;
-        left: 40px;
+        left: 80px;
         top: 11px;
     }
     &__icon-image{
@@ -24,14 +24,14 @@
         }
     &__account{
             position: absolute;
-            right: 40px;
+            right: 80px;
             top: 11px;
         }
         &__account-text{
             color: $primary;
             font-size: 17px;
             font-family: $SecondFontFamily;
-
+            font-weight: 600;
             }
         &__account-image{
             vertical-align: top;

@@ -10,6 +10,13 @@
 }
 
 @font-face {
+  font-family: "Chronicle Display Bold";
+  /* Имя шрифта */
+  src: url("/fonts/ChronicleDisplaySemibold.otf");
+  /* Путь к файлу со шрифтом */
+}
+
+@font-face {
   font-family: "Gilroy";
   /* Имя шрифта */
   src: url("/fonts/Gilroy-Regular.woff2");
@@ -42,21 +49,39 @@ ul {
   color: #fff;
   font-family: "Chronicle Display";
   font-weight: normal;
-  text-transform: uppercase;
 }
 
 h2.title {
   color: #fff;
+  font-family: "Chronicle Display";
   font-size: calc(18px + 8 * ((100vw - 320px) / 1600));
   display: block;
   line-height: 1.8;
-  margin: 30px;
+  margin: 30px 0;
 }
 
 .text {
   font-family: "Gilroy";
   font-weight: 300;
   line-height: 1.4;
+}
+
+.text.upper-text {
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #FBD784;
+  padding-left: 100px;
+  position: relative;
+}
+
+.text.upper-text:before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 72px;
+  background-color: #FBD784;
+  top: 8px;
+  left: 0;
 }
 
 .btn {
@@ -72,7 +97,7 @@ h2.title {
 }
 
 ._container {
-  max-width: 1110px;
+  max-width: 1460px;
   margin: 0 auto;
   font-size: calc(14px + 14 * ((100vw - 320px) / 1600));
 }
@@ -96,7 +121,7 @@ h2.title {
 
 .header__icon-container {
   position: absolute;
-  left: 40px;
+  left: 80px;
   top: 11px;
 }
 
@@ -106,7 +131,7 @@ h2.title {
 
 .header__account {
   position: absolute;
-  right: 40px;
+  right: 80px;
   top: 11px;
 }
 
@@ -114,6 +139,7 @@ h2.title {
   color: #fff;
   font-size: 17px;
   font-family: "Gilroy";
+  font-weight: 600;
 }
 
 .header__account-image {
@@ -133,7 +159,7 @@ h2.title {
 }
 
 .menu__link {
-  font-size: 14px;
+  font-size: 18px;
   font-family: "Gilroy";
   font-weight: 600;
   margin: 0;
@@ -165,30 +191,44 @@ h2.title {
   padding-top: 140px;
   width: 100%;
   top: 0;
-  background: linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0B1D26 108.93%), url("../img/VG.png"), url("../img/MG.png"), url("../img/HG.png"), linear-gradient(#0b1d26, #0b1d26);
-  background-size: 100% 100%,100% 50%, 100% 70%, 100% 50%, 100% 100%;
-  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
-  background-position: top, bottom, bottom, top, top;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #0b1d26 100%), linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0B1D26 108.93%), url("../img/VG.png"), url("../img/MG.png"), url("../img/HG.png"), linear-gradient(#0b1d26, #0b1d26);
+  background-size: 100% 10%, 100% 100%,100% 50%, 100% 70%, 100% 50%, 100% 100%;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: bottom,  top, bottom, bottom, top, top;
 }
 
 .main-heading_btn {
+  padding: 15px 40px 15px 0;
+  text-transform: none;
+  line-height: 2;
+  position: relative;
+}
+
+.main-heading_btn:after {
+  display: block;
+  background: url("../img/arrow_downward_24px.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
   position: absolute;
-  right: 30px;
-  border: 2px solid white;
-  font-size: calc(14px + 8 * ((100vw - 320px) / 1600));
-  padding: 15px 40px;
+  content: "";
+  height: 40px;
+  width: 20px;
+  right: 0;
+  top: 5px;
 }
 
 .main-heading__container {
   height: 1200px;
+  padding-top: 120px;
+  position: relative;
 }
 
 .main-heading__content {
-  background: linear-gradient(90deg, rgba(0, 91, 193, 0.6), rgba(0, 91, 193, 0.6) 40%, rgba(0, 0, 0, 0) 40%);
   color: #fff;
   height: 100%;
+  width: 100%;
   display: flex;
-  align-items: stretch;
+  justify-content: space-between;
 }
 
 .main-heading__block {
@@ -196,17 +236,75 @@ h2.title {
 }
 
 .main-heading__title {
+  margin: 0 auto;
   line-height: 1.5;
-  font-weight: 500;
+  font-family: "Chronicle Display Bold";
+  font-weight: normal;
   text-transform: capitalize;
   color: #fff;
   text-align: left;
-  font-size: calc(38px + 10 * ((100vw - 320px) / 1600));
-  margin: 0;
+  font-size: calc(48px + 40 * ((100vw - 320px) / 1600));
 }
 
 .main-heading__text {
   font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
+}
+
+.main-heading__social-links-container {
+  margin-left: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-heading__social-links-container .text {
+  -ms-writing-mode: tb-rl;
+      writing-mode: tb-rl;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.main-heading .img-container:nth-child(2) {
+  display: block;
+  padding-bottom: 30px;
+}
+
+.main-heading__title-container {
+  position: relative;
+}
+
+.main-heading__slider-container {
+  position: relative;
+}
+
+.main-heading__slider-container .slider-content {
+  display: flex;
+  position: absolute;
+  right: 80px;
+  top: 11px;
+}
+
+.main-heading__slider-container .slider-text li {
+  padding-top: 30px;
+  padding-right: 30px;
+  font-weight: 600;
+  text-align: right;
+}
+
+.main-heading__slider-container .slider-indicate {
+  width: 3px;
+  height: 240px;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: relative;
+}
+
+.main-heading__slider-container .slider-indicate .slider-indicator {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 3px;
+  height: 25%;
+  background-color: white;
+  transition: top .3s ease-in-out;
 }
 
 .section {
@@ -231,108 +329,151 @@ h2.title {
   font-size: calc(12px + 4 * ((100vw - 320px) / 1600));
 }
 
-.main_content__header {
-  margin: 0;
+.main_content {
+  position: relative;
+  top: -100px;
 }
 
 .main_content .info-block {
   display: flex;
 }
 
+.main_content .info-block .text-container {
+  flex: 1 0 200px;
+  padding-top: 100px;
+  padding-left: 150px;
+  position: relative;
+}
+
+.main_content .info-block .text-container__number {
+  font-size: 240px;
+  font-weight: 700;
+  font-family: "Gilroy";
+  color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.main_content .info-block .text-container__heading {
+  font-size: 60px;
+  line-height: 1.2;
+}
+
+.main_content .info-block .text-container__text {
+  font-size: 18px;
+  line-height: 2;
+}
+
+.main_content .info-block .text-container__link {
+  color: #FBD784;
+  font-weight: 600;
+}
+
+.main_content .info-block .text-container__link:after {
+  background: url("../../img/arrow_left.svg");
+  background-repeat: no-repeat;
+  top: 5px;
+  right: 0;
+  background-position: right center;
+  width: 50px;
+  height: 35px;
+}
+
 .main_content .img-container {
-  margin-right: 30px;
+  margin-left: 125px;
   flex: 1 0 200px;
   padding: 0;
+}
+
+.main_content .info-block:nth-child(2) .img-container {
+  margin-left: 0;
+  margin-right: 125px;
+}
+
+.main_content .info-block:not(:last-child) {
+  margin-bottom: 200px;
 }
 
 .main_content .info-block ~ .info-block {
   margin-top: 30px;
 }
 
+.footer {
+  padding-bottom: 115px;
+}
+
 .footer__content {
   background-color: #0B1D26;
   color: #fff;
   font-family: "Gilroy";
-  font-weight: 300;
+  font-weight: 600;
 }
 
 .footer__container {
   font-size: calc(10px + 4 * ((100vw - 320px) / 1600));
-}
-
-.footer__container hr.line {
-  border-width: 0;
-  height: 1px;
-  background-color: #a8a8a8;
-}
-
-.footer .menu__body {
-  width: 60%;
-  min-width: 400px;
-}
-
-.contacts {
-  font-weight: 600;
   display: flex;
-}
-
-.contacts__adress {
-  display: inline-block;
-  flex-grow: 2;
-  flex-basis: 250px;
-  text-align: center;
-  margin: 36px 0;
-}
-
-.contacts__phone {
-  display: inline-block;
-  flex-grow: 1;
-  margin: 34px 0;
-}
-
-.contacts__email {
-  display: inline-block;
-  flex-grow: 1;
-  margin: 36px 0;
-  text-align: right;
-}
-
-.phone-number {
-  font-size: 18px;
-  margin: 0;
-}
-
-.copyright {
-  display: flex;
-  padding: 20px 0;
   justify-content: space-between;
 }
 
+.footer__logo-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer__logo-icon {
+  font-size: 32px;
+  margin: 0 0 24px 0;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+}
+
+.footer .footer-menu {
+  display: flex;
+}
+
+.footer .footer-menu__heading {
+  color: #FBD784;
+  font-weight: 800;
+}
+
+.footer .footer-menu__links {
+  margin-right: 50px;
+}
+
+.footer .footer-menu__link {
+  margin-top: 20px;
+}
+
 .copyright__text {
-  flex-grow: 1;
+  color: #FFFFFF;
+  opacity: 0.5;
 }
 
-.copyright__author {
-  flex-grow: 1;
-  text-align: right;
-}
-
-@media (max-width: 1122px) {
+@media (max-width: 1472px) {
   ._container {
-    max-width: 800px;
+    max-width: 1200px;
+  }
+
+  .main-heading__container {
+    height: 1200px;
   }
 }
 
 @media (max-width: 992px) {
+  ._container {
+    max-width: 800px;
+    padding: 0 10px;
+  }
+
   .menu__list {
     justify-content: flex-end;
   }
-}
 
-@media (max-width: 978px) {
-  ._container {
-    max-width: 600px;
-    padding: 0 10px;
+  .main-heading__container {
+    height: 800px;
   }
 }
 
@@ -342,7 +483,7 @@ h2.title {
   }
 
   ._container {
-    max-width: none;
+    max-width: 600px;
   }
 
   .menu__list {
@@ -374,18 +515,16 @@ h2.title {
     width: 100%;
   }
 
-  .main-heading {
-    background-clip: content-box;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
   .main-heading_btn {
     padding: 5px 10px;
   }
 
-  .main-heading__content {
-    background: linear-gradient(90deg, rgba(0, 91, 193, 0.6), rgba(0, 91, 193, 0.6) 30%, rgba(0, 0, 0, 0) 30%);
+  .main-heading__container {
+    height: 625px;
+  }
+
+  .main_content .info-block {
+    flex-wrap: wrap;
   }
 }
 
@@ -496,8 +635,8 @@ h2.title {
     width: 100%;
   }
 
-  .main-heading__content {
-    background: linear-gradient(90deg, rgba(0, 91, 193, 0.6), rgba(0, 91, 193, 0.6) 60%, rgba(0, 0, 0, 0) 60%);
+  .main-heading__container {
+    height: 390px;
   }
 
   .main-heading__block {
@@ -513,10 +652,6 @@ h2.title {
     margin-left: 0;
   }
 
-  .main_content .info-block {
-    flex-wrap: wrap;
-  }
-
   .main_content .img-container {
     height: 200px;
     margin-right: 0;
@@ -528,30 +663,5 @@ h2.title {
 
   .main_content .ill {
     position: static;
-  }
-
-  .contacts {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .contacts__adress {
-    flex-basis: 0;
-    margin: 10px 0;
-  }
-
-  .contacts__email {
-    text-align: center;
-    margin: 10px 0;
-  }
-
-  .copyright {
-    flex-wrap: wrap;
-    text-align: center;
-  }
-
-  .copyright__author {
-    text-align: center;
-    margin-top: 20px;
   }
 }

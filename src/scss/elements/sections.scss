@@ -40,25 +40,67 @@
 }
 }
 .main_content{
-    &__header{
-        margin:0;
-    }
+    position:relative;
+    top:-100px;
     .info-block{
         display:flex;
-        @media (max-width: $md4+px){
+        @media (max-width: $md3+px){
             flex-wrap: wrap;
-        }    
-    }
+        }
+        .text-container{
+            flex:1 0 200px;
+            padding-top: 100px;
+            padding-left:150px;
+            position:relative;
+            &__number{
+                font-size: 240px;
+                font-weight: 700;
+                font-family: $SecondFontFamily;
+                color: rgba(255,255,255,0.2);
+                position:absolute;
+                top:0;
+                left:0;
+            }
+            &__heading{
+                font-size:60px;
+                line-height: 1.2;
+            }
+            &__text{
+                font-size:18px;
+                line-height:2;
+            }
+            &__link{
+                color:$accent;
+                font-weight: 600;
+            }
+            &__link:after{
+                background: url('../../img/arrow_left.svg');
+                background-repeat: no-repeat;
+                top:5px;
+                right:0;
+                background-position: right center;
+                width: 50px;
+                height: 35px;
+            }
+        }
+    } 
     .img-container{
-        margin-right: 30px;
+        margin-left: 125px;
         flex:1 0 200px;
         padding: 0;
         @media (max-width: $md4+px){
             height: 200px;
             margin-right: 0;
         }
-    }
 
+    }
+    .info-block:nth-child(2) .img-container{
+        margin-left: 0;
+        margin-right: 125px;
+    }
+    .info-block:not(:last-child){
+        margin-bottom: 200px;
+    }
     .info-block~.info-block{
         margin-top: 30px;
         @media (max-width: $md4+px){

@@ -1,94 +1,49 @@
 .footer{
+    padding-bottom: 115px;
     &__content{
         background-color: $secondary;
         color:#fff;
         font-family: $SecondFontFamily;
-        font-weight: 300;
+        font-weight: 600;
     }
     &__container {
         @include adaptive-value('font-size', 14, 10, 0);
-        hr.line{
-            border-width: 0;
-            height: 1px;
-            background-color: rgb(168, 168, 168);
-        }
+        display:flex;
+        justify-content: space-between;
     }
-
-    &__contacts {
-    }
-
-    .menu {
-        &__body {
-                    width: 60%;
-                    min-width: 400px;
-                }
-    }
-
-}
-.contacts {
-    font-weight: 600;
-    display:flex;
-    @media (max-width: $md4+px){
+    &__logo-column{
+        display:flex;
         flex-direction: column;
-        text-align: center;
+        justify-content: space-between;
+
     }
-    &__adress {
-        display: inline-block;
-        flex-grow: 2;
-        flex-basis: 250px;
-        text-align: center;
-        margin: 36px 0;
-        @media (max-width: $md4+px){
-            flex-basis: 0;
-            margin: 10px 0;
+
+    &__logo-icon{
+        font-size: 32px;
+        margin: 0 0 24px 0;
+        line-height: 1.2;
+        letter-spacing: 0.01em;
+        text-transform: capitalize;
+    }
+    .footer-menu {
+        display:flex;
+        &__heading{
+           color:$accent;
+           font-weight: 800;
+        }
+        &__links{
+            margin-right: 50px;
+        }
+        &__link{
+            margin-top: 20px;
         }
     }
-    &__phone{
-        display: inline-block;
-        flex-grow: 1;
-        margin: 34px 0;
-    }
-    &__email {
-        display: inline-block;
-        flex-grow: 1;
-        margin: 36px 0;
-        text-align: right;
-        @media (max-width: $md4+px){
-            text-align: center;
-            margin: 10px 0;
-        }
-    }
-}
-.phone-number {
-    font-size: 18px;
-    margin: 0;
 
 }
 
 .copyright {
-    display:flex;
-    padding:20px 0;
-    justify-content: space-between;
-    @media (max-width: $md4+px){
-        flex-wrap: wrap;
-        text-align: center;
-    }
     &__text {
-        flex-grow: 1;
-    }
-    
-
-    &__author {
-        flex-grow: 1;
-        text-align: right;
-        @media (max-width: $md4+px){
-            text-align: center;
-            margin-top: 20px;
-        }
-    }
-}
-.coyright {
-
-    &__sign {
+        color: #FFFFFF;
+        opacity: 0.5;
     }
 }
