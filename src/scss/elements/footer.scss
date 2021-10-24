@@ -1,24 +1,25 @@
-.footer{
+.footer {
     padding-bottom: 115px;
-    &__content{
+    @media (max-width: $md3+px) {
+        margin-top: -100px;
+    }
+    &__content {
         background-color: $secondary;
-        color:#fff;
+        color: #fff;
         font-family: $SecondFontFamily;
         font-weight: 600;
     }
     &__container {
         @include adaptive-value('font-size', 14, 10, 0);
-        display:flex;
+        display: flex;
         justify-content: space-between;
     }
-    &__logo-column{
-        display:flex;
+    &__logo-column {
+        display: flex;
         flex-direction: column;
         justify-content: space-between;
-
     }
-
-    &__logo-icon{
+    &__logo-icon {
         font-size: 32px;
         margin: 0 0 24px 0;
         line-height: 1.2;
@@ -26,19 +27,18 @@
         text-transform: capitalize;
     }
     .footer-menu {
-        display:flex;
-        &__heading{
-           color:$accent;
-           font-weight: 800;
+        display: flex;
+        &__heading {
+            color: $accent;
+            font-weight: 800;
         }
-        &__links{
+        &__links {
             margin-right: 50px;
         }
-        &__link{
+        &__link {
             margin-top: 20px;
         }
     }
-
 }
 
 .copyright {

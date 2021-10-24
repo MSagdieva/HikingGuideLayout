@@ -1,125 +1,119 @@
-.section{
+.section {
     margin-top: 30px;
-    @media (max-width:$md4+px) {
-    margin-top: 200px;}
-}
-.introduction {
-	&__information { 
-        
+    @media (max-width: $md2+px) {
+        margin-top: 200px;
     }
 }
-.info-block__container { 
-    display:flex;
-    flex-wrap:wrap;
-    flex-direction: column;
-    .info-block { 
-        flex: 1.5 0.8 200px;
-    
 
-}
-.info-block~.info-block{
+.info-block__container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    .info-block {
+        flex: 1.5 0.8 200px;
+    }
+    .info-block~.info-block {
         margin-left: 30px;
-        @media (max-width:$md4+px) {
+        @media (max-width: $md2+px) {
             margin-left: 0;
         }
     }
 }
-.info{
 
-}
-.img-container { 
+.info {}
 
-}
-.ill {
+.img-container {}
 
-}
-.text-container { 
+.ill {}
 
-.text { 
-    @include adaptive-value('font-size', 16, 12, 0);
+.text-container {
+    .text {
+        @include adaptive-value('font-size', 16, 12, 0);
+    }
 }
-}
-.main_content{
-    position:relative;
-    top:-100px;
-    .info-block{
-        display:flex;
-        @media (max-width: $md3+px){
+
+.main_content {
+    position: relative;
+    top: -100px;
+    @media (max-width: $md4+px) {}
+    .info-block {
+        display: flex;
+        @media (max-width: $md2+px) {
             flex-wrap: wrap;
         }
-        .text-container{
-            flex:1 0 200px;
+        .text-container {
+            flex: 1 0 200px;
             padding-top: 100px;
-            padding-left:150px;
-            position:relative;
-            @media (max-width: $md4+px){
-                padding:0;
+            padding-left: 150px;
+            position: relative;
+            @media (max-width: $md2+px) {
+                padding: 0;
             }
-            &__number{
+            &__number {
                 font-size: 240px;
                 font-weight: 700;
                 font-family: $SecondFontFamily;
-                color: rgba(255,255,255,0.2);
-                position:absolute;
-                top:0;
-                left:0;
+                color: rgba(255, 255, 255, 0.2);
+                position: absolute;
+                top: 0;
+                left: 0;
             }
-            &__heading{
+            &__heading {
                 @include adaptive-value("font-size", 60, 26, 0);
                 line-height: 1.2;
             }
-            &__text{
-                font-size:18px;
-                line-height:2;
+            &__text {
+                @include adaptive-value("font-size", 18, 14, 0);
+                line-height: 2;
             }
-            &__link{
-                color:$accent;
+            &__link {
+                color: $accent;
                 font-weight: 600;
             }
-            &__link:after{
+            &__link:after {
                 background: url('../../img/arrow_left.svg');
                 background-repeat: no-repeat;
-                top:5px;
-                right:0;
+                top: 5px;
+                right: 0;
                 background-position: right center;
                 width: 50px;
                 height: 35px;
             }
         }
-    } 
-    .img-container{
+    }
+    .img-container {
         margin-left: 125px;
-        flex:1 0 200px;
+        flex: 1 0 200px;
         padding: 0;
-        @media (max-width: $md4+px){
+        @media (max-width: $md2+px) {
             margin-right: 0;
-            order:1;
+            order: 1;
             margin-left: 0;
         }
-
     }
-    .info-block:nth-child(2) .img-container{
+    .info-block:nth-child(2) .img-container {
         margin-left: 0;
         margin-right: 125px;
-        @media (max-width: $md4+px){
+        @media (max-width: $md2+px) {
             margin-right: 0;
         }
     }
-    .info-block:not(:last-child){
-        margin-bottom: 200px;
+    .info-block:not(:last-child) {
+        @include adaptive-value("margin-bottom",
+        200,
+        100,
+        0);
     }
-    .info-block~.info-block{
+    .info-block~.info-block {
         margin-top: 30px;
-        @media (max-width: $md4+px){
+        @media (max-width: $md2+px) {
             margin-top: 0px;
         }
     }
-    .ill{
-        @media (max-width: $md4+px){
-        position: static;
-        width: 100%;
+    .ill {
+        @media (max-width: $md2+px) {
+            position: static;
+            width: 100%;
+        }
     }
-    }
-
 }
-

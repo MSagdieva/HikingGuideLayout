@@ -1,88 +1,111 @@
 @font-face {
-    font-family: "Chronicle Display"; /* Имя шрифта */
-    src: url("/fonts/ChronicleDisplayRoman.otf"); /* Путь к файлу со шрифтом */
-   }
-   @font-face {
-    font-family: "Chronicle Display Bold"; /* Имя шрифта */
-    src: url("/fonts/ChronicleDisplaySemibold.otf"); /* Путь к файлу со шрифтом */
-   }
-   @font-face {
-    font-family: "Gilroy"; /* Имя шрифта */
-    src: url("/fonts/Gilroy-Regular.woff2"); /* Путь к файлу со шрифтом */
-   }
-@import url('/src/scss/normalize.css');
+    font-family: "Chronicle Display";
+    /* Имя шрифта */
+    src: url("/fonts/ChronicleDisplayRoman.otf");
+    /* Путь к файлу со шрифтом */
+}
 
+@font-face {
+    font-family: "Chronicle Display Bold";
+    /* Имя шрифта */
+    src: url("/fonts/ChronicleDisplaySemibold.otf");
+    /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: "Gilroy";
+    /* Имя шрифта */
+    src: url("/fonts/Gilroy-Regular.woff2");
+    /* Путь к файлу со шрифтом */
+}
+
+@import url('/src/scss/normalize.css');
 @import 'mixins/adaptive-value';
 @import 'support/variables';
-
 // ---------------main-components-styles-----------------------//
-body{
-box-sizing: border-box;
-font-size: 20px;
-background-color: $secondary;
-color: $primary;
-a{
-    text-decoration: none;
-    color: #fff;
+body {
+    box-sizing: border-box;
+    font-size: 20px;
+    background-color: $secondary;
+    color: $primary;
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+    //     @media (max-width: $md1+px) {
+    //         font-size: 18px;
+    //     }
+    //     @media (max-width: $md2+px) {
+    //         font-size: 16px;
+    //     }
+    //     @media (max-width: $md3+px) {
+    //         font-size: 14px;
+    //     }
 }
-//     @media (max-width: $md1+px) {
-//         font-size: 18px;
-//     }
-//     @media (max-width: $md2+px) {
-//         font-size: 16px;
-//     }
-//     @media (max-width: $md3+px) {
-//         font-size: 14px;
-//     }
-}
-ul{
+
+ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-.section{
+
+.section {
     margin: 150px 0 0 0;
 }
+
 .title {
     color: $primary;
     font-family: $fontFamily;
     font-weight: normal;
 }
-h2.title{
+
+h2.title {
     color: $primary;
     font-family: $fontFamily;
-    @include adaptive-value('font-size', 26, 18, 0);
+    @include adaptive-value('font-size',
+    26,
+    18,
+    0);
     display: block;
     line-height: 1.8;
     margin: 30px 0;
-    @media (max-width:$md3+px){
+    @media (max-width: $md3+px) {
         margin: 20px;
     }
-    @media (max-width:$md4+px){
+    @media (max-width:$md4+px) {
         margin: 20px 0;
         text-align: center;
     }
 }
+
 .text {
     font-family: $SecondFontFamily;
     font-weight: 300;
     line-height: 1.4;
 }
-.text.upper-text{
+
+.text.upper-text {
     font-weight: 800;
     text-transform: uppercase;
-    color:$accent;
-    padding-left: 100px;
+    color: $accent;
     position: relative;
+    @include adaptive-value('padding-left',
+    100,
+    50,
+    0);
 }
-.text.upper-text:before{
-    position:absolute;
-    content:"";
+
+.text.upper-text:before {
+    position: absolute;
+    content: "";
     height: 2px;
-    width: 72px;
+    @include adaptive-value('width',
+    72,
+    36,
+    0);
     background-color: $accent;
-    top:8px;
-    left:0;
+    top: 8px;
+    left: 0;
 }
 
 .btn {
@@ -97,31 +120,26 @@ h2.title{
     cursor: pointer;
 }
 
-._anim-items{
-    transform:translateY(30%);
-    opacity:0;
+._anim-items {
+    transform: translateY(30%);
+    opacity: 0;
     transition: all .5s ease-in;
 }
-._anim-items._active{
-    transform:translateY(0);
-    opacity:1;
+
+._anim-items._active {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 // ---------------container styles-----------------------//
 @import 'elements/container';
-
 // ---------------header styles-----------------------//
 @import 'elements/header';
-
 // ---------------menu styles-----------------------//
 @import 'elements/menu';
-
 // ---------------main page styles-----------------------//
 @import 'elements/heading';
-
 // ---------------sections styles-----------------------//
-
 @import 'elements/sections';
-
 // ---------------footer styles-----------------------//
 @import 'elements/footer';
