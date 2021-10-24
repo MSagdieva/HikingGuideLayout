@@ -6,7 +6,9 @@
     background-size: 100% 10%, 100% 100%,100% 50%, 100% 70%, 100% 50%, 100% 100%;
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
     background-position:  bottom,  top, bottom, bottom, top, top;
-
+    @media (max-width: $md4+px) {
+        padding-bottom: 140px;
+    }
     &_btn{
         padding: 15px 40px 15px 0;
         text-transform:none;
@@ -24,9 +26,7 @@
             right:0;
             top:5px;
         }
-        @media (max-width: $md3+px) {
-            padding: 5px 10px;
-        }
+
     }
     &__container {
         height: 1200px;
@@ -42,7 +42,8 @@
             height:625px;
         }
         @media (max-width: $md4+px) {
-            height: 390px;
+            height: 250px;
+            padding-top:0;
         }
     }
     &__content {
@@ -54,7 +55,7 @@
         @media (max-width: $md3+px) {
         }
         @media (max-width: $md4+px) {
-
+            flex-wrap:wrap;
         }
     }
     &__block {
@@ -74,11 +75,8 @@
         text-align: left;
         @include adaptive-value('font-size',
         88,
-        48,
+        26,
         0);
-        @media (max-width: $md4+px) {
-            font-size: 30px;
-        }
     }
     &__text {
         @include adaptive-value('font-size',
@@ -92,17 +90,38 @@
         margin-left: 80px;
         display: flex;
         flex-direction: column;
-        
+        @media (max-width: $md4+px) {
+            order:1;
+            margin-left: 10px;
+            width: 100%;
+            flex-direction: row;
+            height: 20px;
+            justify-content: center;
+            .img-container img{
+                    width: 20px;
+            }
+        }
         .text{
             writing-mode:tb-rl;
             margin-bottom: 30px;
-            font-weight: 600;;
+            font-weight: 600;
+            @media (max-width: $md4+px) {
+                writing-mode:rl;
+                margin-bottom: 0;
+                margin-right: 15px;
+                font-size: 14px;
+                line-height: 1.5;
+            }
         }
 
     } 
     .img-container:nth-child(2){
             display:block;
             padding-bottom: 30px;
+            @media (max-width: $md4+px) {
+                padding-bottom: 0; 
+                padding-right: 10px;
+            }
         }
     &__title-container{
         position: relative;
@@ -114,14 +133,22 @@
         position: absolute;
         right: 80px;
         top: 11px;
+        @media (max-width: $md4+px) {
+            right: 10px;
+            top:0;
+        }
         }
         .slider-text li{
             padding-top: 30px;
             padding-right:30px;
             font-weight: 600;
+            font-size: 16px;
             text-align:right;
+            @media (max-width: $md4+px) {
+                padding-top: 10px;
+                padding-right:10px;
         }
-
+    }
         .slider-indicate{
             width:3px;
             height: 240px;

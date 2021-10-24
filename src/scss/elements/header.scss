@@ -18,6 +18,9 @@
         position: absolute;
         left: 80px;
         top: 11px;
+        @media (max-width: $md4+px) {
+            left: 10px;
+        }
     }
     &__icon-image{
         @include adaptive-value('width', 140, 80, 0);

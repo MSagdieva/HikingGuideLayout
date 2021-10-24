@@ -30,7 +30,7 @@ window.addEventListener('click', function(e){
     let target = e.target;
     if (target == document.querySelector('.main-heading_btn'))
     {
-        document.querySelector('.section:nth-child(2)').scrollIntoView({ behavior: 'smooth'});
+        document.querySelector('.main_content.info').scrollIntoView({ behavior: 'smooth'});
         animItems[0].classList.add('_active');
     }
 });
