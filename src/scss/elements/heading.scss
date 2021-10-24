@@ -157,6 +157,7 @@
             font-weight: 600;
             font-size: 16px;
             text-align: right;
+            cursor: pointer;
             @media (max-width: $md4+px) {
                 padding-top: 10px;
                 padding-right: 10px;
@@ -172,7 +173,7 @@
             }
             & .slider-indicator {
                 position: absolute;
-                top: 50%;
+                top: 0;
                 left: 0;
                 width: 3px;
                 height: 25%;
